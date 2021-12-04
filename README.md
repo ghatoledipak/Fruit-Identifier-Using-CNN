@@ -13,11 +13,11 @@ Fruit-Identifier-Using-CNN project that I have developed for identifying fruit n
 
 <h2> User Interface Snapshots </h2>
 
-![alt text](https://github.com/ghatoledipak/Fruit-Identifier-Using-CNN/blob/main/assets/images/UI_SS_1.png)
+![alt text](https://github.com/ghatoledipak/Fruit-Identifier-Using-CNN/blob/main/assets/images/UI_SS_11.png)
 
 <br>
 
-![alt text](https://github.com/ghatoledipak/Fruit-Identifier-Using-CNN/blob/main/assets/images/UI_SS_1.png)
+![alt text](https://github.com/ghatoledipak/Fruit-Identifier-Using-CNN/blob/main/assets/images/UI_SS_2.png)
 
 <br>
 
