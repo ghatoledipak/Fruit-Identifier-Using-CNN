@@ -1,15 +1,4 @@
 from flask import Flask,render_template,request
-# from keras.models import load_model
-# from keras.optimizers import Adam
-# from keras import models
-# import numpy as np
-# from keras.preprocessing import image
-# import os
-# from getsolution import solution
-# import numpy as np
-# from tensorflow.keras.models import load_model
-
-
 from tensorflow.keras.preprocessing import image
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
 import matplotlib.pyplot as plt
@@ -23,7 +12,7 @@ from tensorflow.keras.models import load_model
 app = Flask(__name__)
 classes=['Apple', 'Banana', 'Pineapple', 'Watermelon']
 BASE_DIR=os.getcwd()
-upload_folder=os.path.join(os.path.dirname(BASE_DIR),"Fruit Identifier Using CNN/static")
+upload_folder=os.path.join(os.path.dirname(BASE_DIR),"Fruite Identifyier/static")
 model=load_model('my_model.h5')
 # savedModel.summary()
 
@@ -35,15 +24,8 @@ def predict(img_loc):
 	images=np.vstack([x])
 	res=model.predict(images)
 	index=np.argmax(res)
-	# print(res)
 	return classes[index]
-	# img=image.load_img(img_loc,target_size=(128,128))
-	# x=image.img_to_array(img)
-    # x=np.expand_dims(x,axis=0)
-    # images=np.vstack([x])
-    # res=savedModel.predict(images)
-    # index=np.argmax(res)
-    # return classes[index]
+	
 
 
 @app.route('/',methods=["GET","POST"])
@@ -57,7 +39,7 @@ def upload():
 			image_file.save(image_loc)
 			fruit=predict(image_loc)
 			
-			return render_template('predictedDisease.html',fruit=fruit, path=image_file.filename)
+			return render_template('predictedFruit.html',fruit=fruit, path=image_file.filename)
 
 	return render_template('index.html')
 
